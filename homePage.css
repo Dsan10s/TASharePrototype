@@ -6,7 +6,7 @@ html {
 
 body {
 	/*background-color: black;*/
-	background: url(images/bluebackground.jpg) no-repeat center center fixed; 
+	background: url(images/blueBackground.JPG) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
