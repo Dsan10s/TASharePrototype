@@ -24,9 +24,9 @@ h1, h2, h3 {
 }
 
 #cp-results {
-	width: 400px;
+	width: 500px;
 	height: 100%;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.8);
 	float: left;
 	box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
 	padding: 10px;
@@ -72,6 +72,22 @@ h1, h2, h3 {
 		border-radius: 0 4px 4px 0;
 		outline: none;
 	}
+	#cp-resultsDisplay {
+		margin-top: 10px;
+		width: 100%;
+		padding: 10px;
+		overflow: auto;
+	}
+		.cp-result {
+			height: 100px;
+			background-color: white;
+			box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+		}
+			.cp-result-star {
+				vertical-align: middle;
+				height: 30px;
+				display: inline-block;
+			}
 
 	/* Twitter-like glowing box */
 	input[type=text], textarea {outline:none;}
@@ -85,7 +101,7 @@ h1, h2, h3 {
 #cp-viewer {
 	height: 100%;
 	display: inline-block;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.8);
 	box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
 	padding: 10px;
 	border-radius: 3px;

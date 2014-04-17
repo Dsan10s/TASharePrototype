@@ -11,6 +11,8 @@ $(document).ready(function() {
 	var cpFilterBtn = $("#cp-filterBtn")
 	var cpNavbar = $("#navbar");
 	var cpMenu = $("#cp-menu");
+	var cpResultsDisplay = $("#cp-resultsDisplay");
+	var cpClassTitle = $("#cp-classTitle");
 
 	var marginSize = 10;
 	var paddingSize = 10;
@@ -36,6 +38,8 @@ $(document).ready(function() {
 	cpMenu.css("left", -cpSearch.width() - (2*paddingSize))
 		.width(cpResults.width() - marginSize);
 
+	cpResultsDisplay.height(cpResults.height() - (cpClassTitle.height() + (2*marginSize)) - (cpSearch.height() + marginSize + (2*paddingSize)) - (2*marginSize));
+
 	// Responsive JS
 	$(window).resize(function() {
 		var windowHeight = $(window).height() - (2*marginSize);
@@ -44,6 +48,7 @@ $(document).ready(function() {
 		// console.log("windowHeight: " + windowHeight + ", navbarHeight: " + navbarHeight + ", marginSize: " + marginSize);
 		cpContent.height(windowHeight - navbarHeight + marginSize);
 		cpViewer.width(cpContent.width() - cpResults.width() - marginSize - (4*paddingSize));
+		cpResultsDisplay.height(cpResults.height() - (cpClassTitle.height() + (2*marginSize)) - (cpSearch.height() + marginSize + (2*paddingSize)) - (2*marginSize));
 	});
 
 	$("#cp-menu").on("click", function() {
