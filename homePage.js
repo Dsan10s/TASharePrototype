@@ -4,7 +4,8 @@ $(document).ready(function() {
 	var hpBuild = function() {
 		var hpContent = $("#hp-content")
 		var hpNavbar = $("#navbar");
-		var hpColumn = $(".hp-column")
+		var hpColumn = $(".hp-column");
+		var hpClassInfo = $(".hp-classInfo");
 
 		var marginSize = 10;
 		var paddingSize = 10;
@@ -32,6 +33,10 @@ $(document).ready(function() {
 			hpColumn.width((windowWidth - 2*paddingSize)/3);
 			hpColumn.height(hpContent.height() - 2*paddingSize);
 		});
+
+
+		//var classInfoHeading = hpClassInfo.children().first();
+		//classInfoHeading.css("margin-top", (hpClassInfo.height() - classInfoHeading.height())/2 + "px");
 
 	}
 
