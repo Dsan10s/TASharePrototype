@@ -189,19 +189,43 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-              <h4 class="modal-title" id="myModalLabel">Upload Content</h4>
-            </div>
-            <div class="modal-body" id="um-content">
-            	<div id="um-fileOpt">
-            		Yoooo this is coool stuff
-            		
-            	</div>
+              <h3 class="modal-title" id="myModalLabel">Upload Content</h3>
+          </div>
+          <div class="modal-body" id="um-content">
+          	<div id="um-fileOpt">
+          		<ul class="nav nav-pills nav-stacked">
+          			<li class="active"><a href="#">Video</a></li>
+          			<li><a href="#">Website</a></li>
+          			<li><a href="#">Audio</a></li>
+          			<li><a href="#">Text/Example</a></li>
+          		</ul>
+
+          	</div>
 
             	<div id="um-inputs">
+            		<form role="form">
+            			<div class="form-group">
+            				<label for="um-title">Title</label>
+            				<input type="title" class="form-control" id="um-title" placeholder="Enter Title">
+            			</div>
+            			<div class="form-group">
+            				<label for="um-class">Class</label>
+            				<input type="class" class="form-control" id="um-class" placeholder="Enter Class">
+            			</div>
+            			<div class="form-group">
+            				<label for="um-link">Link</label>
+            				<input type="link" class="form-control" id="um-link" placeholder="Enter Link">
+            			</div>
+            			<div class="form-group">
+            				<label for="um-descrip">Description</label>
+            				<textarea type="description" class="form-control" id="um-descrip" placeholder="Enter Description" rows="2"></textarea>
+            			</div>
+<!--             			<button type="submit" class="btn btn-default">Submit</button> -->
+            		</form>
             	</div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Upload</button>
+              <button type="submit" class="btn btn-default" data-dismiss="modal">Upload</button>
             </div>
           </div>
         </div>

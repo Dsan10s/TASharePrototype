@@ -1,4 +1,4 @@
-a, a:focus {
+#navbar a, a:focus {
 	color: white;
 	text-decoration: none;
 }
