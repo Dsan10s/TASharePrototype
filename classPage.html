@@ -1,4 +1,5 @@
 <html>
+<<<<<<< HEAD
   <head>
     <script type="text/javascript" src = "jQuery.js"></script> <!-- change this for the app -->
     <script type="text/javascript" src = "handlebars-v1.3.0.js"></script>
@@ -117,6 +118,96 @@
       <div id = "cp-viewer">
       </div>
     </div>
+=======
+	<head>
+		<script type="text/javascript" src = "jQuery.js"></script> <!-- change this for the app -->
+		<script type="text/javascript" src = "handlebars-v1.3.0.js"></script>
+		<script type="text/javascript" src = "bootstrap3/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
+	</head>
+	<body>
+		<div id = "navbar"></div>
+		<div id = "cp-content">
+			<div id = "cp-results">
+				<legend id = "cp-classTitle" style = "border-color: grey;">
+					<h1 style = "height: 50px; position: relative">
+						<span>9.00</span> 
+
+						<button id= "cp-uploadBtn" type="button" class="btn btn-default" title = "Upload" data-toggle="modal" data-target="#myModal" style="cursor: pointer">
+							<img id = "cp-uploadImg" src = "images/upload.png"/>
+
+						</button>
+
+					</h1>
+					
+				</legend>
+				<div id = 'cp-searchOverlay'>
+					<span style = "margin-right: 15px;" class = "cp-icon glyphicon glyphicon-search"></span>
+				</div>
+				<input type = 'text' id = 'cp-search' placeholder = 'Search Class Results'>
+				<div id = "cp-filter" class="btn-group dropdown keep-open">
+				  <button id = "cp-filterBtn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				    Filter <span class="caret"></span>
+				  </button>
+				  <ul id = "cp-menu" class="dropdown-menu" role="menu">
+				    <li>
+				    	<div style = "text-align: center;">
+				    		<button id = "cp-topRatedBtn" class = "btn btn-default">Top Rated</button>
+				    		<button id = "cp-NewestBtn" class = "btn btn-default">Newest</button>
+				    	</div>
+				    </li>
+				    <li class="divider"></li>
+				    <li class = "cp-filterOption" id = "cp-filterStarred"><a>Starred<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+				    <li class = "cp-filterOption" id = "cp-filterVideos"><a>Videos<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+				    <li class = "cp-filterOption" id = "cp-filterWebsites"><a>Websites<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+				    <li class = "cp-filterOption" id = "cp-filterAudio"><a>Audio<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+				    <li class = "cp-filterOption" id = "cp-filterNotes"><a>Notes<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+				    <li class = "cp-filterOption" id = "cp-filterProblems"><a>Problems<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+				    <li class = "cp-filterOption" id = "cp-filterOther"><a>Other<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+				  </ul>
+				</div>
+				<div id = "cp-resultsDisplay">
+					<div class = "cp-result" data-type = "video">
+						<img class = "cp-result-star" src = 'images/StarOutline.gif'/>
+						<h2 class = "cp-result-title">Video 1</h2>
+						<img class = "cp-result-icon" src = 'images/videoIcon.png'/>
+						<h2 class = "cp-results-upvotes">+2123</h2>
+					</div>
+					<div class = "cp-result" data-type = "note">
+						<img class = "cp-result-star" src = 'images/StarOutline.gif'/>
+						<h2 class = "cp-result-title">Note 1</h2>
+						<img class = "cp-result-icon" src = 'images/noteIcon.png'/>
+						<h2 class = "cp-results-upvotes">+453</h2>
+
+					</div>
+					<div class = "cp-result" data-type = "audio">
+						<img class = "cp-result-star" src = 'images/StarOutline.gif'/>
+						<h2 class = "cp-result-title">Audio 1</h2>
+						<img class = "cp-result-icon" src = 'images/audioIcon.png'/>
+						<h2 class = "cp-results-upvotes">+113</h2>
+
+					</div>
+					<div class = "cp-result" data-type = "website">
+						<img class = "cp-result-star" src = 'images/StarOutline.gif'/>
+						<h2 class = "cp-result-title">Website 1</h2>
+						<img class = "cp-result-icon" src = 'images/websiteIcon.png'/>
+						<h2 class = "cp-results-upvotes">+50</h2>
+
+					</div>
+					<div class = "cp-result" data-type = "problems">
+						<img class = "cp-result-star" src = 'images/StarOutline.gif'/>
+						<h2 class = "cp-result-title">Problems 1</h2>
+						<img class = "cp-result-icon" src = 'images/problemsIcon.jpg'/>
+						<h2 class = "cp-results-upvotes">+23</h2>
+
+					</div>
+
+				</div>
+			</div>
+			<div id = "cp-viewer"></div>
+		</div>
+>>>>>>> master
 
     <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -126,16 +217,25 @@
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
               <h4 class="modal-title" id="myModalLabel">Upload Content</h4>
             </div>
-            <div class="modal-body">
-              <p>
+            <div class="modal-body" id="um-content">
+            	<div id="um-fileOpt">
+            		Yoooo this is coool stuff
+            		
+            	</div>
 
+            	<div id="um-inputs">
+
+<<<<<<< HEAD
                 Modalllllllll
+=======
+            		inputsssss
+>>>>>>> master
 
 
-              </p>
+            	</div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Upload</button>
             </div>
           </div>
         </div>
