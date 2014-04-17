@@ -6,7 +6,7 @@ html {
 }
 body {
 	/*background-color: black;*/
-	background: url(images/bluebackground.jpg) no-repeat center center fixed; 
+	background: url(images/blueBackground.JPG) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -82,12 +82,48 @@ h1, h2, h3 {
 			height: 100px;
 			background-color: white;
 			box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+			margin-bottom: 10px;
 		}
 			.cp-result-star {
 				vertical-align: middle;
 				height: 30px;
-				display: inline-block;
+				margin-left: 10px;
+				float: left;
 			}
+			.cp-result-title {
+				margin: 0;
+				height: 33px;
+				width: 200px;
+				text-overflow: ellipsis;
+				margin-top: 35px;
+				float: left;
+				overflow: hidden;
+				margin-left: 10px;
+			}
+			.cp-result-titleCont {
+				float: left;
+				margin-left: 10px;
+				width: 200px;
+				text-overflow: ellipsis;
+				background-color: lightgrey;
+			}
+
+	#cp-uploadOverlay {
+		color: white;
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 0;
+		pointer-events: none;
+		background-color: rgba(200, 200, 200, 0.7);
+	}
+	#cp-uploadBtn {
+		float: right;
+		padding: 0;
+		overflow: hidden;
+		border-radius: 8px;
+		border: 1px solid #ccc;
+	}
 
 	/* Twitter-like glowing box */
 	input[type=text], textarea {outline:none;}
