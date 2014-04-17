@@ -18,6 +18,8 @@ h1, h2, h3 {
 	margin-top: 0px;
 }
 
+
+
 #cp-content {
 	margin: 10px;
 	/*overflow: hidden;*/
@@ -84,8 +86,16 @@ h1, h2, h3 {
 			background-color: white;
 			box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
 			margin-bottom: 10px;
-			cursor: pointer;
+			position: relative;
 		}
+			.cp-result-starFilled {
+				position: absolute;
+				top: 35px;
+				margin-left: 10px;
+				height: 30px;
+				opacity: 0;
+				cursor: pointer;
+			}
 			.cp-result-star {
 				vertical-align: middle;
 				height: 30px;
@@ -115,6 +125,7 @@ h1, h2, h3 {
 				margin-top: 10px;
 				margin-left:10px;
 				float: left;
+				cursor: pointer;
 			}
 			.cp-results-upvotes {
 				float: right;

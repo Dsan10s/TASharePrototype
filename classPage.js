@@ -109,6 +109,14 @@ $(document).ready(function() {
 		$(".cp-result").on("click", function() {
 			buildPreview($(this).attr("data-type"));
 		});
+
+		$(".cp-result-starFilled").on("click", function() {
+			if ($(this).css("opacity") == 0) {
+				$(this).css("opacity", 1);
+			} else {
+				$(this).css("opacity", 0);
+			}
+		});
 	}
 	var Build = function() {
 		NavbarBuild();
