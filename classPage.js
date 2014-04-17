@@ -117,6 +117,35 @@ $(document).ready(function() {
 				$(this).css("opacity", 0);
 			}
 		});
+
+		$('#video-pill').click(function (e) {
+			e.preventDefault();
+			$(this).tab('show');
+		});
+
+		$('#web-pill').click(function (e) {
+			e.preventDefault();
+			$(this).tab('show');
+		});
+
+		$('#audio-pill').click(function (e) {
+			e.preventDefault();
+			$(this).addClass('active');
+		});
+
+		$('#audio-pill').click(function (e) {
+			e.preventDefault();
+			$(this).tab('show');
+		});
+
+		$('#upload-button').click(function(e){
+			document.getElementById("alert-div").style.display = "block";
+		});
+
+		$('.close').click(function(e) {
+			document.getElementById("alert-div").style.display = "none";
+		});
+
 	}
 	var Build = function() {
 		NavbarBuild();
