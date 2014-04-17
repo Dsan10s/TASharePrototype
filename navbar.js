@@ -4,7 +4,7 @@ var NavbarModule = (function() {
 		var navContainer = $("<div id = 'navContainer'></div>");
 			var navLeft = $("<div id = 'navLeft'></div>");
 				var logo = $("<div id = 'logo'></div>");
-					var img = $("<h1 style = 'margin-top: 10px;'>TA-Share</h1>"); // replace with image
+					var img = $("<a href = 'homePage.html'><h1 style = 'margin-top: 10px;'>TA-Share</h1></a>"); // replace with image
 				var search = $("<input type = 'text' id = 'search' placeholder = 'Search for Classes'>");
 			var navRight = $("<div id = 'navRight'></div>");
 				var profPic = $("<img id = 'profPic' class = 'img-circle' src = 'images/profPic.png'/>")

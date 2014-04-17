@@ -1,3 +1,8 @@
+a, a:focus {
+	color: white;
+	text-decoration: none;
+}
+
 #navbar {
 	height: 80px;
 	width: 100%;
