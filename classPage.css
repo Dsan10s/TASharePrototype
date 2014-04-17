@@ -170,16 +170,20 @@ h1, h2, h3 {
 	overflow: auto;
 } 
 #cp-rbottom{
-	width: 100%;
+	width: 80%;
 	padding: 25px;
 	padding-bottom: 5px;
 	height: 170px;
+	margin-left: auto;
+	margin-right: auto;
 }
 #cp-rdes{
 	text-align: center;
 	font-family: Bebas Neue Bold;
 	font-size: 20px;
 	width: inherit;
+	margin-left: auto;
+	margin-right: auto;
 	
 }
 #cp-rfeedb{
