@@ -54,6 +54,24 @@ h1, h2, h3 {
 	#cp-filter {
 		vertical-align: top;
 	}
+	.cp-filterOption {
+		cursor: pointer;
+	}
+	#cp-filterBtn {
+		padding: 10px;
+	}
+	#cp-topRatedBtn {
+		width: 40%;
+		margin-left: 2px;
+		border-radius: 4px 0 0 4px;
+		outline: none;
+	}
+	#cp-newestBtn {
+		width: 40%;
+		margin-left: -4px;
+		border-radius: 0 4px 4px 0;
+		outline: none;
+	}
 
 	/* Twitter-like glowing box */
 	input[type=text], textarea {outline:none;}
