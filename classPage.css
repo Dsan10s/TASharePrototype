@@ -32,7 +32,7 @@ h1, h2, h3 {
 	padding: 10px;
 	border-radius: 3px;
 	position: relative;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 	#cp-searchOverlay {
 		pointer-events: none;
@@ -166,11 +166,49 @@ h1, h2, h3 {
 }
 #cp-rdes{
 	text-align: center;
+	font-family: Bebas Neue Bold;
+	font-size: 20px;
+	width: 600px;
+	margin-left: 35px;
+	margin-right: 25px;
+}
+#cp-rfeedb{
+	width: 600px;
+	margin-left: 35px;
+	margin-right: 25px;
+	text-align: center;
 }
 #cp-video{
 	width: 500px;
 	padding: 25px;
 	height: 350px;
+	padding-left: 120px;
+}
+#cp-problem{
+	width: 700px;
+	padding: 25px;
+	height: 350px;
+	padding-left: 20px;
+	overflow-y:scroll;
+	overflow-x: hidden; 
+}
+#cp-audio{
+	width: 600px;
+	margin-left: 50px;
+	height: 350px;
+	padding-top: 200px;
+	padding-left: 140px;
+}
+#cp-website{
+	width: 700px;
+	padding: 25px;
+	height: 350px;
+	padding-left: 20px;
+}
+#cp-rfeedb-but{
+	padding: 5px;
+	padding-right: 15px;
+	margin-left: 20px;
 }
 
 #um-content{

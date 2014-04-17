@@ -86,10 +86,9 @@ $(document).ready(function() {
 			}
 		});
 
-<<<<<<< HEAD
 		buildPreview = function(type) {
 			var source = "";
-			if (type === "problem") {
+			if (type === "problems") {
 				source   = $("#problem-template").html();
 			}
 			else if(type === "note"){
@@ -107,16 +106,13 @@ $(document).ready(function() {
 			var template = Handlebars.compile(source);
 			$("#cp-viewer").html(template);
 		}
-=======
 		$(".cp-result").on("click", function() {
-			alert($(this).attr("data-type"));
+			buildPreview($(this).attr("data-type"));
 		});
->>>>>>> master
 	}
 	var Build = function() {
 		NavbarBuild();
 		cpBuild();
-		buildPreview("video");
 	}
 	window.onload = Build;
 });
