@@ -1,3 +1,4 @@
+var buildPreview;
 $(document).ready(function() {
 	// CLASS_PAGE = {}; // we don't need this because of doucment.ready
 	var cpBuild = function() {
@@ -85,8 +86,28 @@ $(document).ready(function() {
 			}
 		});
 
-		$(".cp-result-icon").on("click", function() {
-			alert($(this).parent().attr("data-type"));
+		buildPreview = function(type) {
+			var source = "";
+			if (type === "problems") {
+				source   = $("#problem-template").html();
+			}
+			else if(type === "note"){
+				source   = $("#note-template").html();
+			}
+			else if(type === "audio"){
+				source   = $("#audio-template").html();
+			}
+			else if(type === "website"){
+				source   = $("#website-template").html();
+			}
+			else{
+				source   = $("#video-template").html();
+			}
+			var template = Handlebars.compile(source);
+			$("#cp-viewer").html(template);
+		}
+		$(".cp-result").on("click", function() {
+			buildPreview($(this).attr("data-type"));
 		});
 
 		$(".cp-result-starFilled").on("click", function() {

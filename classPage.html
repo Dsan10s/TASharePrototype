@@ -91,15 +91,105 @@
 
 				</div>
 			</div>
-			<div id = "cp-viewer"></div>
+			<script id="video-template" type="text/x-handlebars-template">
+        <div id="cp-video">
+          <iframe src="http://www.youtube.com/embed/Q0z-C8Ke2FQ?wmode=transparent" width="500" height="350" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="cp-rbottom">
+          <div id="cp-rdes"> 
+          <p>
+          Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+          Learn about a new "superpower" that is not being taught in in 90% of US schools.
+          </p>
+          </div>
+          <div id="cp-rfeedb">
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/StarOutline.gif'/></button>
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/like.gif'/></button>
+          </div>
+        </div>
+      </script>
+      <script id="note-template" type="text/x-handlebars-template">
+        <div id="cp-problem">
+          <img width="690" src="questionpdf.jpg">
+        </div>
+        <div id="cp-rbottom">
+          <div id="cp-rdes"> 
+          <p>
+          Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+          Learn about a new "superpower" that is not being taught in in 90% of US schools.
+          </p>
+          </div>
+          <div id="cp-rfeedb">
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/StarOutline.gif'/></button>
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/like.gif'/></button>
+          </div>
+        </div>
+      </script>
+      <script id="audio-template" type="text/x-handlebars-template">
+        <div id="cp-audio">
+          <audio controls >
+            <source src="Teach.mp3" type="audio/mpeg">
+            <source src="Teach.ogg" type="audio/ogg">
+            <embed height="500" width="300" src="Teach.mp3">
+          </audio>
+        </div>
+        <div id="cp-rbottom">
+          <div id="cp-rdes"> 
+          <p>
+          Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+          Learn about a new "superpower" that is not being taught in in 90% of US schools.
+          </p>
+          </div>
+          <div id="cp-rfeedb">
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/StarOutline.gif'/></button>
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/like.gif'/></button>
+          </div>
+        </div>
+      </script>
+      <script id="website-template" type="text/x-handlebars-template">
+        <div id="cp-website">
+          <object data=https://ask.metafilter.com/80858/How-to-teach-myself-computer-science width="700" height="350"> <embed src=https://ask.metafilter.com/80858/How-to-teach-myself-computer-science width="700" height="350"> </embed> Error: Embedded data could not be displayed. </object>
+        </div>
+        <div id="cp-rbottom">
+          <div id="cp-rdes"> 
+          <p>
+          Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+          Learn about a new "superpower" that is not being taught in in 90% of US schools.
+          </p>
+          </div>
+          <div id="cp-rfeedb">
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/StarOutline.gif'/></button>
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/like.gif'/></button>
+          </div>
+        </div>
+      </script>
+      <script id="problem-template" type="text/x-handlebars-template">
+        <div id="cp-problem">
+          <img width="690" src="questionpdf.jpg">
+        </div>
+        <div id="cp-rbottom">
+          <div id="cp-rdes"> 
+          <p>
+          Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+          Learn about a new "superpower" that is not being taught in in 90% of US schools.
+          </p>
+          </div>
+          <div id="cp-rfeedb">
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/StarOutline.gif'/></button>
+            <button id = "cp-rfeedb-but"><img class = "cp-result-star" src = 'images/like.gif'/></button>
+          </div>
+        </div>
+      </script>
+      <div id = "cp-viewer">
+      </div>
 		</div>
-
-	  <!-- Modal -->
+    <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<<<<<<< HEAD
               <h3 class="modal-title" id="myModalLabel">Upload Content</h3>
           </div>
           <div class="modal-body" id="um-content">
@@ -133,6 +223,17 @@
             			</div>
 <!--             			<button type="submit" class="btn btn-default">Submit</button> -->
             		</form>
+=======
+              <h4 class="modal-title" id="myModalLabel">Upload Content</h4>
+            </div>
+            <div class="modal-body" id="um-content">
+            	<div id="um-fileOpt">
+            		Yoooo this is coool stuff
+            		
+            	</div>
+
+            	<div id="um-inputs">
+>>>>>>> 5db008e609b7b59a9e2d86fc18633cc2f4cfd112
             	</div>
             </div>
             <div class="modal-footer">
@@ -142,9 +243,9 @@
         </div>
       </div>
 
-	</body>
-	<script type="text/javascript" src = "classPage.js"></script>
-	<script type="text/javascript" src = "navbar.js"></script>
-	<link rel="stylesheet" type="text/css" href="classPage.css">
-	<link rel="stylesheet" type="text/css" href="navbar.css">
+  </body>
+  <script type="text/javascript" src = "classPage.js"></script>
+  <script type="text/javascript" src = "navbar.js"></script>
+  <link rel="stylesheet" type="text/css" href="classPage.css">
+  <link rel="stylesheet" type="text/css" href="navbar.css">
 </html>
