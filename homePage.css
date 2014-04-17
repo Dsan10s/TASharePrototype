@@ -1,0 +1,33 @@
+html {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	/*background-color: black;*/
+	background: url(images/bluebackground.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: Gandhi Sans;
+}
+
+h1, h2, h3 {
+	font-family: Bebas Neue Bold;
+	margin-top: 0px;
+}
+
+#hp-content {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 98%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+	padding: 10px;
+	border-radius: 3px;
+	position: relative;
+}
