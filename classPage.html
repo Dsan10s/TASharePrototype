@@ -1,58 +1,124 @@
 <html>
-	<head>
-		<script type="text/javascript" src = "jQuery.js"></script> <!-- change this for the app -->
-		<script type="text/javascript" src = "handlebars-v1.3.0.js"></script>
-		<script type="text/javascript" src = "bootstrap3/js/bootstrap.min.js"></script>
-		
-		<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
-	</head>
-	<body>
-		<div id = "navbar"></div>
-		<div id = "cp-content">
-			<div id = "cp-results">
-				<legend style = "border-color: grey;">
-					<h1 style = "text-align: center;">6.813 
+  <head>
+    <script type="text/javascript" src = "jQuery.js"></script> <!-- change this for the app -->
+    <script type="text/javascript" src = "handlebars-v1.3.0.js"></script>
+    <script type="text/javascript" src = "bootstrap3/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
+  </head>
+  <body>
+    <div id = "navbar"></div>
+    <div id = "cp-content">
+      <div id = "cp-results">
+        <legend style = "border-color: grey;">
+          <h1 style = "text-align: center;">6.813 
 
-					<button id= "cp-uploadBtn" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" style="cursor: pointer">Upload</button>
+          <button id= "cp-uploadBtn" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" style="cursor: pointer">Upload</button>
 
-				</h1>
-					
-				</legend>
-				<div id = 'cp-searchOverlay'>
-					<span style = "margin-right: 15px;" class = "cp-icon glyphicon glyphicon-search"></span>
-				</div>
-				<input type = 'text' id = 'cp-search' placeholder = 'Search Class Results'>
-				<div id = "cp-filter" class="btn-group dropdown keep-open">
-				  <button id = "cp-filterBtn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				    Filter <span class="caret"></span>
-				  </button>
-				  <ul id = "cp-menu" class="dropdown-menu" role="menu">
-				    <li>
-				    	<div style = "text-align: center;">
-				    		<button id = "cp-topRatedBtn" class = "btn btn-default">Top Rated</button>
-				    		<button id = "cp-NewestBtn" class = "btn btn-default">Newest</button>
-				    	</div>
-				    </li>
-				    <li class="divider"></li>
-				    <li class = "cp-filterOption" id = "cp-filterStarred"><a>Starred<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
-				    <li class = "cp-filterOption" id = "cp-filterVideos"><a>Videos<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
-				    <li class = "cp-filterOption" id = "cp-filterWebsites"><a>Websites<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
-				    <li class = "cp-filterOption" id = "cp-filterAudio"><a>Audio<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
-				    <li class = "cp-filterOption" id = "cp-filterNotes"><a>Notes<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
-				    <li class = "cp-filterOption" id = "cp-filterProblems"><a>Problems<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
-				    <li class = "cp-filterOption" id = "cp-filterOther"><a>Other<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
-				  </ul>
-				</div>
-				<div id = "cp-resultsDisplay">
-					<div class = "cp-result" data-type = "video">
-						<img class = "cp-result-star" src = 'images/starOutline.png'/>
-					</div>
-				</div>
-			</div>
-			<div id = "cp-viewer"></div>
-		</div>
+        </h1>
+          
+        </legend>
+        <div id = 'cp-searchOverlay'>
+          <span style = "margin-right: 15px;" class = "cp-icon glyphicon glyphicon-search"></span>
+        </div>
+        <input type = 'text' id = 'cp-search' placeholder = 'Search Class Results'>
+        <div id = "cp-filter" class="btn-group dropdown keep-open">
+          <button id = "cp-filterBtn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Filter <span class="caret"></span>
+          </button>
+          <ul id = "cp-menu" class="dropdown-menu" role="menu">
+            <li>
+              <div style = "text-align: center;">
+                <button id = "cp-topRatedBtn" class = "btn btn-default">Top Rated</button>
+                <button id = "cp-NewestBtn" class = "btn btn-default">Newest</button>
+              </div>
+            </li>
+            <li class="divider"></li>
+            <li class = "cp-filterOption" id = "cp-filterStarred"><a>Starred<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+            <li class = "cp-filterOption" id = "cp-filterVideos"><a>Videos<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+            <li class = "cp-filterOption" id = "cp-filterWebsites"><a>Websites<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+            <li class = "cp-filterOption" id = "cp-filterAudio"><a>Audio<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+            <li class = "cp-filterOption" id = "cp-filterNotes"><a>Notes<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+            <li class = "cp-filterOption" id = "cp-filterProblems"><a>Problems<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+            <li class = "cp-filterOption" id = "cp-filterOther"><a>Other<span style = "float: right; color: #5FCA54; display: none;" class = "glyphicon glyphicon-ok"></span></a></li>
+          </ul>
+        </div>
+        <div id = "cp-resultsDisplay">
+          <div class = "cp-result" data-type = "video">
+            <img class = "cp-result-star" src = 'images/starOutline.png'/>
+          </div>
+        </div>
+      </div>
+      <script id="video-template" type="text/x-handlebars-template">
+        <div id="cp-video">
+          <iframe src="http://www.youtube.com/embed/Q0z-C8Ke2FQ?wmode=transparent" width="420" height="345" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="cp-rbottom">
+          <div id="cp-rdes"> 
+          <p>
+          Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+          Learn about a new "superpower" that is not being taught in in 90% of US schools.
+          </p>
+          </div>
+          <div id="cp-rfeedb">
+            <button>Like</button>
+            <button>Favourite</button>
+          </div>
+        </div>
+      </script>
+      <script id="note-template" type="text/x-handlebars-template">
+        <div id="cp-note">
+          <object data=https://www.ets.org/mft/about/content/computer_science width="600" height="400"> <embed src=https://www.ets.org/mft/about/content/computer_science width="600" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+        </div>
+        <div id="cp-rdes"> 
+        <p>
+        Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+        Learn about a new "superpower" that is not being taught in in 90% of US schools.
+        </p>
+        </div>
+      </script>
+      <script id="audio-template" type="text/x-handlebars-template">
+        <div id="cp-audio">
+          <audio controls>
+            <source src="Teach.mp3" type="audio/mpeg">
+            <source src="Teach.ogg" type="audio/ogg">
+            <embed height="50" width="100" src="Teach.mp3">
+          </audio>
+        </div>
+        <div id="cp-rdes"> 
+        <p>
+        Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+        Learn about a new "superpower" that is not being taught in in 90% of US schools.
+        </p>
+        </div>
+      </script>
+      <script id="website-template" type="text/x-handlebars-template">
+        <div id="cp-website">
+          <object data=https://ask.metafilter.com/80858/How-to-teach-myself-computer-science width="600" height="400"> <embed src=https://ask.metafilter.com/80858/How-to-teach-myself-computer-science width="600" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+        </div>
+        <div id="cp-rdes"> 
+        <p>
+        Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+        Learn about a new "superpower" that is not being taught in in 90% of US schools.
+        </p>
+        </div>
+      </script>
+      <script id="problem-template" type="text/x-handlebars-template">
+        <div id="cp-problem">
+          <img src="questionpdf.jpg">
+        </div>
+        <div id="cp-rdes"> 
+        <p>
+        Knowing how to code is like knowing how to read and write was in medival times. You can certainly get along without it, but you do so by living in ignorance of many of the wonders around you. 
+        Learn about a new "superpower" that is not being taught in in 90% of US schools.
+        </p>
+        </div>
+      </script>
+      <div id = "cp-viewer">
+      </div>
+    </div>
 
-	  <!-- Modal -->
+    <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -63,7 +129,7 @@
             <div class="modal-body">
               <p>
 
-              	Modalllllllll
+                Modalllllllll
 
 
               </p>
@@ -75,9 +141,9 @@
         </div>
       </div>
 
-	</body>
-	<script type="text/javascript" src = "classPage.js"></script>
-	<script type="text/javascript" src = "navbar.js"></script>
-	<link rel="stylesheet" type="text/css" href="classPage.css">
-	<link rel="stylesheet" type="text/css" href="navbar.css">
+  </body>
+  <script type="text/javascript" src = "classPage.js"></script>
+  <script type="text/javascript" src = "navbar.js"></script>
+  <link rel="stylesheet" type="text/css" href="classPage.css">
+  <link rel="stylesheet" type="text/css" href="navbar.css">
 </html>

@@ -1,3 +1,4 @@
+var buildPreview;
 $(document).ready(function() {
 	// CLASS_PAGE = {}; // we don't need this because of doucment.ready
 	var cpBuild = function() {
@@ -73,10 +74,32 @@ $(document).ready(function() {
 				$(checkMark).css("display", "none");
 			}
 		});
+
+		buildPreview = function(type) {
+			var source = "";
+			if (type === "problem") {
+				source   = $("#problem-template").html();
+			}
+			else if(type === "note"){
+				source   = $("#note-template").html();
+			}
+			else if(type === "audio"){
+				source   = $("#audio-template").html();
+			}
+			else if(type === "website"){
+				source   = $("#website-template").html();
+			}
+			else{
+				source   = $("#video-template").html();
+			}
+			var template = Handlebars.compile(source);
+			$("#cp-viewer").html(template);
+		}
 	}
 	var Build = function() {
 		NavbarBuild();
 		cpBuild();
+		buildPreview("video");
 	}
 	window.onload = Build;
 });
