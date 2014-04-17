@@ -59,5 +59,21 @@ $(document).ready(function() {
 			navLeft.width(navCont.width() - navRight.width() - marginSize);
 			search.width( navLeft.width() - (logo.width() + (2*marginSize) + (2*paddingSize)) - (2*marginSize) );
 		});
+
+		search.autocomplete({
+			source: ["9.00 Intro to Psychology"]
+		});
+
+		//Submit answer if user presses enter in input box
+		search.on("keyup", function(e) {
+			if (e.keyCode == 13) {
+				var answerInput = search.val();
+				search.val("");
+
+				if (answerInput == "9.00 Intro to Psychology") {
+					window.location.href = "classPage.html";
+				}
+			}
+		});
 	}
 });
