@@ -13,7 +13,12 @@ $(document).ready(function() {
 		var cpNavbar = $("#navbar");
 		var cpMenu = $("#cp-menu");
 		var cpResultsDisplay = $("#cp-resultsDisplay");
+		var cpResult = $(".cp-result");
 		var cpClassTitle = $("#cp-classTitle");
+		var cpResultStar = $(".cp-result-star");
+		var cpUploadImg = $("#cp-uploadImg");
+		var cpUploadOverlay = $("#cp-uploadOverlay");
+		var cpTitleCont = $(".cp-result-titleCont");
 
 		var marginSize = 10;
 		var paddingSize = 10;
@@ -41,6 +46,12 @@ $(document).ready(function() {
 
 		cpResultsDisplay.height(cpResults.height() - (cpClassTitle.height() + (2*marginSize)) - (cpSearch.height() + marginSize + (2*paddingSize)) - (2*marginSize));
 
+		cpResultStar.css("margin-top", (cpResult.height() - cpResultStar.height()) / 2);
+		
+		cpUploadImg.height(50);
+		cpUploadOverlay.height(cpUploadImg.height()).width(cpUploadImg.width());
+		
+		cpTitleCont.css("margin-top", 35).height(33);
 		// Responsive JS
 		$(window).resize(function() {
 			var windowHeight = $(window).height() - (2*marginSize);
