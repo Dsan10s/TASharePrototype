@@ -84,6 +84,10 @@ $(document).ready(function() {
 				$(checkMark).css("display", "none");
 			}
 		});
+
+		$(".cp-result").on("click", function() {
+			alert($(this).attr("data-type"));
+		});
 	}
 	var Build = function() {
 		NavbarBuild();
