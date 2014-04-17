@@ -85,8 +85,16 @@ $(document).ready(function() {
 			}
 		});
 
-		$(".cp-result").on("click", function() {
-			alert($(this).attr("data-type"));
+		$(".cp-result-icon").on("click", function() {
+			alert($(this).parent().attr("data-type"));
+		});
+
+		$(".cp-result-starFilled").on("click", function() {
+			if ($(this).css("opacity") == 0) {
+				$(this).css("opacity", 1);
+			} else {
+				$(this).css("opacity", 0);
+			}
 		});
 	}
 	var Build = function() {
