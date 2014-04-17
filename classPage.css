@@ -105,5 +105,30 @@ h1, h2, h3 {
 	box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
 	padding: 10px;
 	border-radius: 3px;
+}
 
+#um-content{
+	margin: 10px;
+	height: 80%;
+	padding: 10px;
+}
+
+#um-fileOpt{
+	width: 180px;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	float: left;
+	/*box-shadow: 10px 10px 10px rgba(0,0,0,0.3);*/
+	padding: 10px;
+	border-radius: 3px;
+	position: relative;
+}
+
+#um-inputs{
+	height: 100%;
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.8);
+	/*box-shadow: 10px 10px 10px rgba(0,0,0,0.3);*/
+	padding: 10px;
+	border-radius: 3px;
 }
