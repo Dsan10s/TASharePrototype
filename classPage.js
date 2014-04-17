@@ -120,22 +120,31 @@ $(document).ready(function() {
 
 		$('#video-pill').click(function (e) {
 			e.preventDefault();
-			$(this).tab('show');
+			$('#video-pill').addClass('active');
+			$('#web-pill').removeClass('active');
+			$('#audio-pill').removeClass('active');
+			$('#txt-pill').removeClass('active');
 		});
 
 		$('#web-pill').click(function (e) {
-			e.preventDefault();
-			$(this).tab('show');
+			$('#web-pill').addClass('active');
+			$('#video-pill').removeClass('active');
+			$('#audio-pill').removeClass('active');
+			$('#txt-pill').removeClass('active');
 		});
 
 		$('#audio-pill').click(function (e) {
-			e.preventDefault();
-			$(this).addClass('active');
+			$('#audio-pill').addClass('active');	
+			$('#web-pill').removeClass('active');
+			$('#video-pill').removeClass('active');
+			$('#txt-pill').removeClass('active');
 		});
 
-		$('#audio-pill').click(function (e) {
-			e.preventDefault();
-			$(this).tab('show');
+		$('#txt-pill').click(function (e) {
+			$('#txt-pill').addClass('active');
+			$('#web-pill').removeClass('active');
+			$('#audio-pill').removeClass('active');
+			$('#video-pill').removeClass('active');
 		});
 
 		$('#upload-button').click(function(e){
