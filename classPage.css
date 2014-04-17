@@ -169,7 +169,7 @@ h1, h2, h3 {
 
 #um-content{
 	margin: 10px;
-	height: 80%;
+	height: 400px;
 	padding: 10px;
 }
 
@@ -178,7 +178,6 @@ h1, h2, h3 {
 	height: 100%;
 	background-color: rgba(255, 255, 255, 0.8);
 	float: left;
-	/*box-shadow: 10px 10px 10px rgba(0,0,0,0.3);*/
 	padding: 10px;
 	border-radius: 3px;
 	position: relative;
@@ -186,9 +185,13 @@ h1, h2, h3 {
 
 #um-inputs{
 	height: 100%;
+	width: 370;
 	display: inline-block;
 	background-color: rgba(255, 255, 255, 0.8);
-	/*box-shadow: 10px 10px 10px rgba(0,0,0,0.3);*/
 	padding: 10px;
 	border-radius: 3px;
+}
+
+textarea {
+   resize: none;
 }
